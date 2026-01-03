@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharda Foundation | Excellence in Medical Research & Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            DEFAULT: '#004d40', // Deep Teal from stethoscope
+                            light: '#e0f2f1',   // Light background
+                        },
+                        nature: {
+                            DEFAULT: '#43a047', // Leaf Green
+                            light: '#f1f8e9',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling for anchor links */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-white shadow-md fixed w-full z-10 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="h-12 w-12 bg-medical rounded-full flex items-center justify-center text-white font-bold">SF</div>
+                    <span class="font-serif text-2xl font-bold text-medical">Sharda Foundation</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-600 hover:text-medical font-medium">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-medical font-medium">About</a>
+                    <a href="#objectives" class="text-gray-600 hover:text-medical font-medium">Our Work</a>
+                    <a href="#contact" class="text-gray-600 hover:text-medical font-medium">Contact</a>
+                    <a href="#contact" class="bg-medical hover:bg-teal-800 text-white px-4 py-2 rounded-md font-medium transition">Donate / Join</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 bg-gradient-to-br from-medical-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
+                Promoting Excellence in <span class="text-medical">Medical Research</span> & Care
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                "To promote excellence in medical research, provide aid to underserved patients, and enhance medical education for professionals and the community."
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#objectives" class="bg-nature hover:bg-green-700 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg transition">
+                    Explore Our Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="objectives" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-serif font-bold text-gray-900">Our Core Objectives</h2>
+                <div class="w-24 h-1 bg-nature mx-auto mt-4 rounded"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-medical-light rounded-xl p-8 shadow-sm hover:shadow-md transition border border-teal-100">
+                    <div class="text-4xl mb-4">🔬</div>
+                    <h3 class="text-xl font-bold text-medical mb-3">Medical Research</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm list-disc pl-5">
+                        <li>Conduct clinical & translational research in underserved regions.</li>
+                        <li>Develop innovative low-cost healthcare solutions.</li>
+                        <li>Collaborate with academic institutions.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-nature-light rounded-xl p-8 shadow-sm hover:shadow-md transition border border-green-100">
+                    <div class="text-4xl mb-4">🩺</div>
+                    <h3 class="text-xl font-bold text-nature mb-3">Patient Support</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm list-disc pl-5">
+                        <li>Financial & logistical support for underprivileged patients.</li>
+                        <li>Organize free medical camps and screenings.</li>
+                        <li>Community awareness programs.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 rounded-xl p-8 shadow-sm hover:shadow-md transition border border-blue-100">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Education</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm list-disc pl-5">
+                        <li>Workshops, seminars, and conferences for professionals.</li>
+                        <li>Scholarships & fellowships for specialized training.</li>
+                        <li>Public health education materials.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-serif font-bold text-gray-900 mb-6">How We Are Organized</h2>
+                    <p class="text-gray-600 mb-6">
+                        The Sharda Foundation is governed by a dedicated Managing Committee responsible for day-to-day operations and decision-making. We believe in transparency and community involvement.
+                    </p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-medical">
+                        <h4 class="font-bold text-gray-900 mb-2">Managing Committee Structure:</h4>
+                        <ul class="grid grid-cols-2 gap-2 text-gray-700">
+                            <li>• President</li>
+                            <li>• Secretary</li>
+                            <li>• Treasurer</li>
+                            <li>• Executive Members (3)</li>
+                        </ul>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4 italic">
+                        * Elections are held every 5 years. Accounts are audited annually.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-medical mb-4">Key Activities</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-nature mr-2">✓</span>
+                            <span>Annual medical research summits</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-nature mr-2">✓</span>
+                            <span>Free medical care camps</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-nature mr-2">✓</span>
+                            <span>CME (Continuing Medical Education) programs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-nature mr-2">✓</span>
+                            <span>Biannual newsletter on medical advances</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-2xl font-serif font-bold mb-4">Sharda Foundation</h3>
+                <p class="text-slate-400 text-sm">
+                    Enhancing medical research and providing aid to the underserved since [Year].
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-lg font-semibold mb-4 text-nature">Contact Us</h4>
+                <p class="text-slate-300 mb-2">
+                    <strong>Address:</strong><br>
+                    Plot no 3, JDA 2B,<br>
+                    Bajnamath, Jabalpur
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold mb-4 text-nature">Get Involved</h4>
+                <p class="text-slate-400 text-sm mb-4">
+                    Interested in volunteering or collaborating on research?
+                </p>
+                <a href="mailto:contact@shardafoundation.org" class="inline-block bg-white text-slate-900 px-4 py-2 rounded text-sm font-bold hover:bg-gray-200 transition">
+                    Email Us
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+            &copy; 2024 Sharda Foundation. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
