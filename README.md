@@ -25,6 +25,3 @@ This website serves as the digital presence for the Sharda Foundation, located i
 * **Styling:** Tailwind CSS (via CDN)
 * **Hosting:** Render (Static Site)
 * **Version Control:** Git & GitHub
-
-## 🚀 How to Run Locally
-
