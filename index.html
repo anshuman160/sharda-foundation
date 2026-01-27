@@ -25,7 +25,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="logo.jpg.jpeg" alt="Logo" class="h-16 w-auto rounded-full">
+                    <img src="logo.jpg.jpeg" alt="Logo" class="h-16 w-16 rounded-full object-cover">
                     <span class="font-serif text-2xl font-bold text-medical">Sharda Foundation</span>
                 </div>
                 
@@ -34,7 +34,9 @@
                     <a href="#about" class="text-gray-600 hover:text-medical font-medium">About</a>
                     <a href="#objectives" class="text-gray-600 hover:text-medical font-medium">Our Work</a>
                     <a href="#contact" class="text-gray-600 hover:text-medical font-medium">Contact</a>
-                    <a href="#contact" class="bg-medical hover:bg-teal-800 text-white px-4 py-2 rounded-md font-medium transition">Donate / Join</a>
+                    <button onclick="toggleDonateModal()" class="bg-medical hover:bg-teal-800 text-white px-4 py-2 rounded-md font-medium transition shadow-lg flex items-center gap-2">
+                        <span>❤️</span> Donate / Join
+                    </button>
                 </div>
 
                 <div class="md:hidden flex items-center">
@@ -47,16 +49,46 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-medical hover:bg-gray-50">Home</a>
                 <a href="#about" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-medical hover:bg-gray-50">About</a>
                 <a href="#objectives" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-medical hover:bg-gray-50">Our Work</a>
                 <a href="#contact" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-medical hover:bg-gray-50">Contact</a>
-                <a href="#contact" onclick="toggleMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-bold text-white bg-medical hover:bg-teal-800 mt-2">Donate / Join</a>
+                <button onclick="toggleDonateModal()" class="w-full text-left px-3 py-2 rounded-md text-base font-bold text-white bg-medical hover:bg-teal-800 mt-2 flex items-center gap-2">
+                    <span>❤️</span> Donate / Join
+                </button>
             </div>
         </div>
     </nav>
+
+    <div id="donate-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden relative animate-fade-in">
+            <button onclick="toggleDonateModal()" class="absolute top-3 right-3 text-gray-500 hover:text-red-500 bg-gray-100 rounded-full p-2 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="text-center p-6 pt-8">
+                <h3 class="text-2xl font-serif font-bold text-medical mb-2">Support Our Cause</h3>
+                <p class="text-gray-600 mb-6 text-sm">Scan the QR code below to donate securely via UPI.</p>
+                
+                <div class="bg-white border-4 border-medical rounded-xl p-2 inline-block shadow-inner mb-4">
+                    <img src="upi.jpg" alt="Scan to Pay" class="w-64 h-64 object-contain">
+                </div>
+
+                <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-sm text-gray-700 mb-4">
+                    <p class="font-bold">Bank Transfer Details:</p>
+                    <p>Acct: 432602010070211</p>
+                    <p>IFSC: UBIN0543268</p>
+                </div>
+                
+                <p class="text-xs text-gray-400">All donations support medical aid for the underprivileged.</p>
+            </div>
+            <div class="bg-medical p-3 text-center cursor-pointer hover:bg-teal-800 transition text-white font-bold" onclick="toggleDonateModal()">
+                Close Window
+            </div>
+        </div>
+    </div>
 
     <section id="home" class="pt-32 pb-20 bg-gradient-to-br from-medical-light to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -181,21 +213,36 @@
                 <a href="mailto:contact@shardafoundation.org" class="inline-block bg-white text-slate-900 px-4 py-2 rounded text-sm font-bold hover:bg-gray-200 transition">Email Us</a>
             </div>
         </div>
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
             &copy; 2024 Sharda Foundation. All rights reserved.
+            <div class="mt-2">
+                Developed by 
+                <a href="https://www.linkedin.com/in/anshuman-yadav-1608/" target="_blank" class="text-slate-400 hover:text-white transition underline decoration-dotted">
+                    Eng. Anshuman Yadav
+                </a>
+            </div>
         </div>
     </footer>
 
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleDonateModal() {
+            const modal = document.getElementById('donate-modal');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            // Toggle the modal visibility
+            modal.classList.toggle('hidden');
+            
+            // If the mobile menu is open, close it when we open the donate modal
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
             }
         }
     </script>
 </body>
-
 </html>
